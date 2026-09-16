@@ -1,0 +1,13 @@
+{
+  "addons": {
+    "rtps-pro@pakkascore.blogspot.com": {
+      "updates": [
+        {
+          "version": "3.9.2",
+          "update_link": "https://github.com/PakkaScore/rtps-pro/releases/download/v3.9.2/rtps-pro-3.9.2-firefox-signed.xpi",
+          "browser_specific_settings": { "gecko": { "strict_min_version": "142.0" } }
+        }
+      ]
+    }
+  }
+}
