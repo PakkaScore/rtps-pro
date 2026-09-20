@@ -42,6 +42,6 @@ Works for जाति · आय · निवास · OBC‑NCL (केंद�
 
 ### Help
 
-For guides and troubleshooting, see [**RTPS Pro Help & Guides**](https://pakkasore.blogspot.com/search/label/RTPS%20Pro).
+For guides and troubleshooting, see [**RTPS Pro Help & Guides**](https://pakkascore.blogspot.com/search/label/RTPS%20Pro).
 
 <sub>MIT License · New RTPS fields are picked up automatically on the next Save — no update needed.</sub>
