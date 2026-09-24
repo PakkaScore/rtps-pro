@@ -1,5 +1,5 @@
 <p align="center"><img src="icon-128.png" width="88" alt="RTPS Pro"></p>
-<h1 align="center">RTPS Pro <sub>by PakkaScore</sub></h1>
+<h1 align="center">RTPS Pro Extension</h1>
 <p align="center">Bihar RTPS फ़ॉर्म एक बार सेव करें — अगली बार एक टैप में Auto‑fill।<br>
 <sub>Save a Bihar RTPS certificate form once, auto‑fill it next time in one tap.</sub></p>
 
@@ -22,7 +22,7 @@
 ## Use
 
 1. Open any RTPS form on `serviceonline.bihar.gov.in` and fill it.
-2. **Before Submit** → open RTPS Pro → **New profile** → **Save from this form**.
+2. **Before Submit** → open RTPS Pro extension → **New profile** → **Save from this form**.
 3. Next time: open form → pick profile → **Auto‑fill**. Only photo & captcha remain.
 
 Works for जाति · आय · निवास · OBC‑NCL (केंद्र) · NCL (बिहार) · EWS. Two fictitious example profiles are bundled for a quick test — never submit them.
@@ -42,6 +42,6 @@ Works for जाति · आय · निवास · OBC‑NCL (केंद�
 
 ### Help
 
-For guides and troubleshooting, see [**RTPS Pro Help & Guides**](https://pakkascore.blogspot.com/search/label/RTPS%20Pro).
+For guides and troubleshooting, see [**RTPS Pro  Help & Guides**](https://pakkascore.blogspot.com/search/label/RTPS%20Pro).
 
 <sub>MIT License · New RTPS fields are picked up automatically on the next Save — no update needed.</sub>
