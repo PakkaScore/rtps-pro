@@ -42,6 +42,8 @@ Works for जाति · आय · निवास · OBC‑NCL (केंद�
 
 ### Help
 
-For guides and troubleshooting, see [**RTPS Pro  Help & Guides**](https://pakkascore.blogspot.com/search/label/RTPS%20Pro).
+For guides and troubleshooting, see [**RTPS Pro Help & Guides**](https://pakkascore.blogspot.com/search/label/RTPS%20Pro).
 
 <sub>MIT License · New RTPS fields are picked up automatically on the next Save — no update needed.</sub>
+
+<sub><b>Disclaimer:</b> RTPS Pro is an independent tool by PakkaScore. It is not affiliated with, endorsed by, or connected to the Government of Bihar, NIC, or the RTPS portal.</sub>
