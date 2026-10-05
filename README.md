@@ -2,7 +2,7 @@
 
 # RTPS Pro Extension by PakkaScore
 
-![RTPS Pro — Auto-save & auto-fill Bihar RTPS forms](3-github/github-social-preview-1280x640.png)
+![RTPS Pro — Auto-save & auto-fill Bihar RTPS forms](screenshots/github-social-preview-1280x640.png)
 
 [![Firefox Add-ons](https://img.shields.io/amo/v/rtps-pro?label=Firefox%20Add-ons&color=FF7139)](https://addons.mozilla.org/firefox/addon/rtps-pro/)
 [![Edge Add-ons](https://img.shields.io/badge/Edge%20Add--ons-3.9.6-0078D7)](https://microsoftedge.microsoft.com/addons/detail/gdicmdfikcnmgajipklnfmkjfcdmlbki)
