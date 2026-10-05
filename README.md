@@ -1,6 +1,6 @@
 <p align="center"><img src="icon-128.png" width="96" alt="RTPS Pro"></p>
 
-# RTPS Pro Extension by PakkaScore
+# RTPS Pro Extension
 
 ![RTPS Pro — Auto-save & auto-fill Bihar RTPS forms](screenshots/github-social-preview-1280x640.png)
 
