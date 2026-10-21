@@ -1,0 +1,11 @@
+{
+  "name": "rtps-pro",
+  "version": "3.9.7",
+  "description": "Bihar RTPS form — save once, fill in one tap.",
+  "type": "module",
+  "scripts": {
+    "dev:docs": "cd docs && python3 -m http.server 8000"
+  },
+  "homepage": "https://pakkascore.github.io/rtps-pro/",
+  "license": "MIT"
+}

@@ -1,84 +1,142 @@
-<p align="center"><img src="icon-128.png" width="96" alt="RTPS Pro"></p>
+<p align="center">
+  <img src="docs/assets/social/github-social-preview-1280x640.png" width="100%" alt="RTPS Pro — Bihar RTPS form save once, fill in one tap">
+</p>
 
-# RTPS Pro Extension
+<h1 align="center">RTPS Pro by PakkaScore</h1>
+<p align="center"><b>Bihar RTPS form — save once, fill in one tap.</b><br>जाति, आय, निवास, OBC-NCL, NCL, EWS — वही नाम, पता, जिला बार-बार? RTPS Pro एक बार सेव करता है, अगली बार एक टैप में भर देता है।</p>
 
-![RTPS Pro — Auto-save & auto-fill Bihar RTPS forms](screenshots/github-social-preview-1280x640.png)
+<p align="center">
+  <a href="https://addons.mozilla.org/firefox/addon/rtps-pro/"><img src="https://img.shields.io/amo/v/rtps-pro?label=Firefox&color=FF7139" alt="Firefox"></a>
+  <a href="https://microsoftedge.microsoft.com/addons/detail/gdicmdfikcnmgajipklnfmkjfcdmlbki"><img src="https://img.shields.io/badge/Edge-3.9.7-0078D7" alt="Edge"></a>
+  <a href="https://github.com/PakkaScore/rtps-pro/releases/latest"><img src="https://img.shields.io/github/v/release/PakkaScore/rtps-pro?label=Chrome%20zip&color=F0A500" alt="Release"></a>
+  <img src="https://img.shields.io/badge/data-100%25%20on--device-16a34a" alt="Privacy">
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT">
+</p>
 
-[![Firefox Add-ons](https://img.shields.io/amo/v/rtps-pro?label=Firefox%20Add-ons&color=FF7139)](https://addons.mozilla.org/firefox/addon/rtps-pro/)
-[![Edge Add-ons](https://img.shields.io/badge/Edge%20Add--ons-3.9.6-0078D7)](https://microsoftedge.microsoft.com/addons/detail/gdicmdfikcnmgajipklnfmkjfcdmlbki)
-[![Chrome zip](https://img.shields.io/github/v/release/PakkaScore/rtps-pro?label=Chrome%20zip&color=F0A500)](https://github.com/PakkaScore/rtps-pro/releases/latest)
-![Privacy](https://img.shields.io/badge/data-stays%20on%20device-16a34a)
-![License](https://img.shields.io/badge/license-MIT-blue)
+<p align="center">
+  <a href="https://pakkascore.github.io/rtps-pro/"><b>🌐 Website — pakkascore.github.io/rtps-pro</b></a> •
+  <a href="https://pakkascore.github.io/rtps-pro/guide-hi.html">हिन्दी गाइड</a> •
+  <a href="https://pakkascore.github.io/rtps-pro/guide-en.html">English Guide</a> •
+  <a href="https://pakkascore.github.io/rtps-pro/download.html">Download</a>
+</p>
 
-**RTPS Pro is a free, open-source browser extension for [serviceonline.bihar.gov.in](https://serviceonline.bihar.gov.in) that saves your Bihar RTPS form once and auto-fills it in one tap next time.**
+---
 
-Getting a caste, income or residence certificate in Bihar means filling the same form again and again — name, father's name, mother's name, address, caste, district, block, panchayat, police station. Need three certificates? Fill three times. Family of four? Twelve times. And if the portal session times out, you start over.
+## Why RTPS Pro?
 
-RTPS Pro eliminates this. Fill any supported form once, save it as a named profile, and auto-fill any future form in one tap — with cascading dropdowns (State → District → Sub-division → Block → Panchayat), live mandatory-field counter, draft recovery, and 100% on-device privacy. No account, no server, everything stays on your phone or computer.
+Bihar RTPS portal (serviceonline.bihar.gov.in) asks for the same 20-30 fields for every certificate — name, father's name, mother's name, address, caste, district → block → panchayat chain, police station. Need 3 certificates? Fill 3 times. Family of 4? 12 times. Session timeout? Start again.
 
-Works with all six Block-level (RO) forms: **जाति (Caste) · आय (Income) · निवास (Residence) · OBC-NCL (Govt. of India, Form-VI) · NCL (Govt. of Bihar, Form-IX) · EWS**.
+**RTPS Pro ends this.** Fill any supported form once, save as a named profile, and auto-fill any future form in one tap — including cascading dropdowns.
 
-## Browser support — Firefox • Edge • Chrome
+**6 Block-level (RO) forms supported:**
 
-| Browser | Platform | Install | Auto-update |
-|---|---|---|---|
-| **🦊 Firefox** ⭐ Recommended | Android + Windows / macOS / Linux | [**Add to Firefox**](https://addons.mozilla.org/firefox/addon/rtps-pro/) | ✅ |
-| **🌊 Edge** | Android + Windows / macOS | [**Get from Edge Add-ons**](https://microsoftedge.microsoft.com/addons/detail/gdicmdfikcnmgajipklnfmkjfcdmlbki) | ✅ |
-| **🌐 Chrome** | Desktop only | [`rtps-pro.zip`](https://github.com/PakkaScore/rtps-pro/releases/latest/download/rtps-pro.zip) → `chrome://extensions` → Developer mode → **Load unpacked** | manual (load the new zip) |
+| Form | Hindi | Use Case |
+|------|-------|----------|
+| Caste Certificate | जाति प्रमाण-पत्र | School admission, reservation |
+| Income Certificate | आय प्रमाण-पत्र | Scholarship, ration, welfare |
+| Residence Certificate | निवास प्रमाण-पत्र | Domicile for jobs/admissions |
+| OBC-NCL (Form-VI) | OBC-NCL केंद्र | Central govt jobs: UPSC, SSC, Railways |
+| NCL (Form-IX) | NCL बिहार | Bihar state jobs: BPSC |
+| EWS Certificate | EWS प्रमाण-पत्र | EWS quota |
 
-**Why Firefox?** Desktop Chrome/Edge sometimes show *"Your connection is not private"* on serviceonline.bihar.gov.in; Firefox opens it fine, and the portal's own compatible-browsers note recommends Firefox. On Android, Firefox and Edge are the two browsers that officially support extensions.
+> BC/EBC typically need both OBC-NCL (Form-VI) for central exams and NCL (Form-IX) for Bihar exams — RTPS Pro handles both.
 
-<details>
-<summary>Other Android browsers (Quetta / Kiwi) — from the zip</summary>
+---
 
-[Quetta](https://play.google.com/store/apps/details?id=net.quetta.browser) (Play Store) or [Kiwi](https://github.com/kiwibrowser/src.next/releases/tag/14310011181) (GitHub, discontinued but working): download `rtps-pro.zip` → menu → **Extensions** → **Developer mode** → **+ (from .zip/.crx/.user.js)** → choose the zip. No auto-update — re-add the new zip (profiles are kept). For official support use Firefox or Edge.
+## Install — Firefox • Edge • Chrome
+
+| Browser | Platform | How | Auto-update |
+|---------|----------|-----|-------------|
+| **🦊 Firefox** ⭐ Recommended | Android + Windows / Mac / Linux | [**Add to Firefox**](https://addons.mozilla.org/firefox/addon/rtps-pro/) | ✅ |
+| **🌊 Edge** | Android + Windows / Mac | [**Get from Edge Add-ons**](https://microsoftedge.microsoft.com/addons/detail/gdicmdfikcnmgajipklnfmkjfcdmlbki) | ✅ |
+| **🌐 Chrome** | Desktop only | [rtps-pro.zip](https://github.com/PakkaScore/rtps-pro/releases/latest/download/rtps-pro.zip) → `chrome://extensions` → Developer mode → Load unpacked | manual |
+
+**Why Firefox Recommended?** Desktop Chrome/Edge sometimes show `NET::ERR_CERT_AUTHORITY_INVALID` on RTPS portal; Firefox opens it fine. RTPS portal's own compatible browsers note recommends Firefox. On Android, Firefox & Edge are the only browsers with official extension support.
+
+<details><summary>Other Android browsers (Quetta / Kiwi) — from zip</summary>
+
+[Quetta](https://play.google.com/store/apps/details?id=net.quetta.browser) (Play Store) or [Kiwi](https://github.com/kiwibrowser/src.next/releases) — download `rtps-pro.zip` → menu → Extensions → Developer mode → + from .zip → pick zip. No auto-update — re-add new zip (profiles kept). Official: Firefox / Edge.
+
 </details>
 
-## Use
+---
 
-1. Open any RTPS form on `serviceonline.bihar.gov.in` (Apply Online → RTPS Services → General Administration → Caste / Income / Residence / OBC-NCL / EWS → Block level) and fill it.
-2. **Before Submit** → open RTPS Pro → **New profile** → name → **Save from this form** → then Submit normally.
-3. Next time: open the form → pick the profile → **Auto-fill**. Only photo & captcha remain.
+## How to Use — 3 Steps
 
-Two clearly fictitious example profiles are bundled — **Sita Devi (OBC)** and **Rahul Sharma (EWS)**, Aadhaar `0000 1111 2222`, mobile `98765 43210` — so you can try Auto-fill before saving anything. Never submit them.
+1. **Fill once, save before Submit** — Open any RTPS form on serviceonline.bihar.gov.in, fill it, then **before Submit** → RTPS Pro → New profile → name → Save from this form → then Submit.
+2. **One-tap next time** — Open any form → pick profile → Auto-fill. Only photo, captcha, declaration left.
+3. **Multiple profiles** — One per family member/client. Search, Duplicate, Edit, Delete from profile card.
 
-## Features
+2 example profiles included (Sita Devi OBC, Rahul Sharma EWS, Aadhaar `0000 1111 2222`) to try without saving — never Submit them.
 
-- **One-tap Auto-fill** — 20–30 boxes in a few seconds, including the dependent dropdown chain (State → District → Sub-division → Block → Panchayat, Caste → Sub-caste), waited for via `MutationObserver`, not fixed sleeps
-- **Multiple profiles** — family members / customers, searchable; **Duplicate · Edit · Delete** right on the profile card; per-form badges (`निवास 22 · OBC 50`). Duplicate copies any profile including examples, with suggestions like "Sita Devi (Hilsa)" / "Sita Devi 2"
-- **Per-form storage** — income, declarations and other form-specific boxes are kept per form; basic details are shared, so one saved form fills the basics of every other form
-- **Mandatory-field counter** — `24 filled • 21 required • 3 optional`, with the missing required boxes listed (never a percentage)
-- **Unique names + identity guard** — duplicate profile names are blocked with suggestions; before *Update* the page is compared with the selected profile and a mismatch asks "Different person?" (override needs a second tap)
-- **Draft recovery** — auto-saves while typing; restore after refresh / session timeout (7-day expiry)
-- **Session-timeout helper** (3.9.6) — clear message + *Open RTPS Home* on the portal's "SESSION TIMED OUT" page
-- **Backup** — Export / Import JSON (one profile or all) + gentle backup reminder. Bottom grid: 4 larger tiles — Export, Import, Clear form, Restore examples
-- **Never touches** photo, captcha, OTP or Submit — you review and submit yourself
-- **हिन्दी / English** UI (default Hindi), automatic dark mode, mobile-first layout
-- **Shortcuts** — `Alt+Shift+F` fill, `Alt+Shift+S` save, right-click menu (desktop)
+---
+
+## Features — 12 Highlights
+
+- ⚡ **One-tap auto-fill** — 20-30 boxes in seconds, cascading State→District→Block→Panchayat via MutationObserver
+- 👥 **Multiple profiles + search** — per family/client, form badges, Duplicate•Edit•Delete
+- 📊 **Live fill counter** — `24 filled • 21 required` near action, green ★ when all required done
+- 💾 **Draft recovery** — auto-saves as you type, restore after refresh/timeout, kept 7 days
+- 🛡️ **Identity guard** — compares applicant name on page vs profile, asks "Different person?" needs double-tap to override
+- 💡 **Pakka Tip — borrow basics** — Residence saved but Income opened? Borrows basics, you add income-specific once → Update
+- 📋 **Duplicate • Edit • Delete** — Duplicate copies basics, Edit updates, Delete armed double-tap (Android safe)
+- 🔒 **100% on-device** — no server, no account, no analytics, only `serviceonline.bihar.gov.in` permission
+- 🔄 **Export / Import JSON** — one or all profiles, backup, transfer
+- 🌐 **Firefox • Edge • Chrome** — Firefox recommended, Android via official stores
+- 🌓 **Hindi default, English toggle, auto dark mode, mobile-first**
+- ⚙️ **Shortcuts** — `Alt+Shift+F` fill, `Alt+Shift+S` save, right-click menu
+
+---
+
+## Screenshots
+
+<p align="center">
+  <img src="docs/assets/screens/store-01-save-once.png" width="32%" alt="Save once">
+  <img src="docs/assets/screens/store-02-one-tap.png" width="32%" alt="One tap">
+  <img src="docs/assets/screens/store-03-form-filled.png" width="32%" alt="Filled">
+</p>
+<p align="center">
+  <img src="docs/assets/screens/store-04-profiles.png" width="32%" alt="Profiles">
+  <img src="docs/assets/screens/store-05-identity-guard.png" width="32%" alt="Guard">
+  <img src="docs/assets/screens/store-06-language-dark.png" width="32%" alt="Dark mode">
+</p>
+
+Full guides with 12 screens each: [Hindi Guide](https://pakkascore.github.io/rtps-pro/guide-hi.html) • [English Guide](https://pakkascore.github.io/rtps-pro/guide-en.html)
+
+---
 
 ## Privacy
 
-100 % on-device. Profiles, drafts and settings live in `chrome.storage.local` only. No server, no account, no analytics, no remote code, no network requests of its own. Permissions: `storage`, `activeTab`, `scripting`, `contextMenus`, `tabs`; host access limited to `https://serviceonline.bihar.gov.in/*`. Uninstalling removes all data.
+100% on-device. Profiles, drafts, settings in `chrome.storage.local` only. No server, no account, no analytics, no remote code, no network requests. Permissions: `storage`, `activeTab`, `scripting`, `contextMenus`, `tabs`; host `https://serviceonline.bihar.gov.in/*`. Uninstall removes everything.
 
-## What's new in 3.9.6
+> **✅ Always FREE.** RTPS Pro never asks for money — not even on WhatsApp. Official only on Firefox Add-ons (by PakkaScore), Edge Add-ons, and this GitHub repo. If someone demands payment, it's fake — report it.
 
-- **Now on Edge Add-ons** — official install & auto-update on Edge for Android and desktop
-- Profile card actions: **Duplicate · Edit · Delete** directly under the selected profile (Duplicate = copy with same address for another family member)
-- **Session-timeout** message with *Open RTPS Home*; drafts still restored afterwards
-- Popup simplified (form chips removed), smaller build, faster fill, several small fixes
-- Backup and rating reminders are rarer and have *Later* / *Never ask*
+**Disclaimer:** Independent tool by PakkaScore. Not affiliated, endorsed, or sponsored by Govt of Bihar, NIC, RTPS/ServicePlus. Always verify form before Submit.
 
-Earlier: 3.9.5 unique names, identity guard, form badges · 3.9.4 stable release · see [Releases](https://github.com/PakkaScore/rtps-pro/releases).
+---
 
-## Help & support
+## What's New in v3.9.7
 
-- Guides (Hindi & English): https://pakkascore.blogspot.com/search/label/RTPS%20Pro
-- Download page: https://pakkascore.blogspot.com/2026/09/rtps-pro-download.html
+- Firefox • Edge • Chrome support, Firefox Recommended
+- Duplicate • Edit • Delete on profile card with armed double-tap safety
+- Identity guard with double-tap confirm to prevent wrong overwrite
+- Progress near Auto-fill action (not bottom)
+- Draft recovery + session timeout helper + JSON backup
+- Hindi matras fixed, 4 larger buttons, hierarchy clear
+- Dark minimal docs site with local images (no blogger), infinite mockup that pauses only on real zoom
 
-New fields added by the RTPS portal are picked up automatically on the next Save — no update needed.
+---
 
-MIT License · © 2026 PakkaScore
+## Docs Site — Professional Redesign
 
-> **✅ Always FREE.** RTPS Pro never asks for money — not on WhatsApp, not anywhere. The genuine extension exists only on Firefox Add-ons (by PakkaScore), Edge Add-ons and this repository. Anyone demanding payment under this name is a fake copy — please report it on the store.
+This repo's GitHub Pages site (`docs/` folder) is redesigned to match [open-autofill](https://harshilsureja.github.io/open-autofill/) style but with RTPS branding:
 
-**Disclaimer:** RTPS Pro is an independent tool by PakkaScore. It is not affiliated with, endorsed by, or connected to the Government of Bihar, NIC, or the RTPS / ServicePlus portal. Always review the form before submitting.
+- Dark minimal `#0E1428` + saffron `#F0A500`, Poppins headings, Geist body
+- Hero with infinite mockup (EN|HI paired rows, 28ms typing, IntersectionObserver, pause only on `visualViewport.scale!=1`)
+- Sections: What it does, Getting Started (3 steps saffron circles), Screenshots (landscape scrollable), Install, Guides (glow on click), FAQ accordion
+- Guides: table-only forms (no duplicate boxes), local `assets/inline/` images, no chips, header single line `RTPS Pro`
+- Optimized: no `backdrop-filter` on cards, single grid 80px, 2 radial gradients, `content-visibility:auto`, `is-zooming` hides heavy layers
+
+See [GITHUB-REPO-PROFESSIONAL-GUIDE.md](./GITHUB-REPO-PROFESSIONAL-GUIDE.md) for how to upload and make everything work great.
+
+MIT License • © 2026 PakkaScore — Built with ❤️ for Bihar

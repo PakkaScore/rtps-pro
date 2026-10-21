@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RTPS Pro by PakkaScore – Settings</title>
+<style>
+:root{--navy:#1B2A4A;--saffron:#F0A500;--gold:#C8860A;--charcoal:#1A1A2E;--slate:#64748B;--soft:#3D5A8A;--mist:#FEF3C7;--green:#15803D;--red:#DC2626;
+ --bg:#FFF8EC;--card:#fff;--tx:var(--charcoal);--mut:#6B7280;--bd:#F1E7D3;--tipbg:#FFF1CC;--tiptx:#5E4200;--field:#FFFDF8;--shadow:0 1px 3px rgba(60,40,0,.06),0 6px 18px rgba(60,40,0,.05)}
+@media (prefers-color-scheme:dark){:root{--bg:#0B1220;--card:#131C2E;--tx:#E5E7EB;--mut:#94A3B8;--bd:#1F2A40;--tipbg:rgba(240,165,0,.12);--tiptx:#FDE68A;--field:#0B1220;--shadow:0 1px 0 rgba(255,255,255,.03)}}
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.5 Roboto,"Noto Sans","Noto Sans Devanagari","Segoe UI",Helvetica,Arial,sans-serif;font-synthesis:weight style;background:var(--bg);color:var(--tx);min-height:100vh}
+h1,h2,h3{font-family:inherit;margin:0}
+.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.hidden{display:none!important}
+/* top bar (mobile) / sidebar (desktop) */
+.shell{display:flex;min-height:100vh}
+aside{background:var(--navy);color:#fff;position:sticky;top:0;z-index:5}
+@media (prefers-color-scheme:dark){aside{background:#162238}}
+.brand{display:flex;align-items:center;gap:10px}.backbtn{margin-left:auto;border:0;background:rgba(255,255,255,.12);color:inherit;width:44px;height:44px;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,.25);display:grid;place-items:center;cursor:pointer;flex:none;padding:0}.backbtn svg{width:22px;height:22px}.backbtn.hidden{display:none}
+.mark{width:40px;height:40px;border-radius:14px;background:linear-gradient(135deg,#F0A500,#FFD166);display:grid;place-items:center;flex:none;box-shadow:0 4px 12px rgba(240,165,0,.35)}.mark svg{width:24px;height:24px;fill:var(--navy)}
+.brand h1{font-size:17px;font-weight:800;letter-spacing:-.01em;color:#fff;line-height:1.15}.brand h1 span{white-space:nowrap}.brand>div{min-width:0}.brand h1 span{color:var(--saffron);font-weight:700;font-size:13px}.brand small{font-size:11px;opacity:.8;display:block}
+@media (max-width:759px){.brand{padding:6px 4px 12px;gap:10px}.brand h1{font-size:18px}.brand h1 span{font-size:14px}.brand small{font-size:12px}.mark{width:48px;height:48px;border-radius:16px}.mark svg{width:28px;height:28px}}
+.tabs{display:flex;gap:4px}
+.nav{display:flex;align-items:center;gap:6px;padding:10px 12px;border-radius:12px;color:rgba(255,255,255,.8);text-decoration:none;font-weight:600;font-size:13px;white-space:nowrap}
+.nav.on{background:rgba(255,255,255,.12);color:#fff;box-shadow:inset 0 -3px 0 var(--saffron)}
+main{flex:1;padding:16px;max-width:900px;width:100%;margin:0 auto}
+section.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:18px;box-shadow:var(--shadow)}
+section.card.hidden{display:none}
+h2{font-size:17px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.opt{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--bd)}.opt>div:first-child{min-width:0;flex:1 1 auto}.opt>:last-child{flex:none}
+.opt:last-child{border:0}.opt>div{flex:1;min-width:0}.opt small{display:block;color:var(--mut);font-size:12px}
+input,select{padding:10px 12px;border:1px solid var(--bd);border-radius:12px;background:var(--field);color:var(--tx);font:inherit;max-width:100%}
+input[type=number]{width:96px}
+input[type=checkbox]{width:22px;height:22px;accent-color:var(--navy);flex:none}
+button{padding:10px 14px;border:1px solid var(--bd);border-radius:14px;background:var(--card);color:var(--tx);font:inherit;font-weight:600;cursor:pointer;box-shadow:var(--shadow)}
+button.primary{background:linear-gradient(135deg,#F0A500,#FFB92E);border-color:transparent;color:var(--navy);box-shadow:0 6px 16px rgba(240,165,0,.3)}
+button.navy{background:var(--navy);border-color:var(--navy);color:#fff}
+button.danger{color:var(--red)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.toolbar select{flex:1 1 140px;min-width:0}
+.toolbar button{flex:1 1 auto}
+.shortcuts{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:flex-end}
+kbd{background:var(--bg);border:1px solid var(--bd);border-radius:4px;padding:0 5px;white-space:nowrap}
+/* field cards (editor) */
+.fields{display:flex;flex-direction:column;gap:8px}
+.fld{border:1px solid var(--bd);border-radius:14px;padding:10px 12px;background:var(--card)}
+.fld .top{display:flex;gap:8px;align-items:center}
+.fld .lab{flex:1;min-width:0;font-weight:600;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fld .kind{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);background:var(--bg);border:1px solid var(--bd);padding:2px 6px;border-radius:999px}
+.fld .top button{padding:6px 8px;font-size:12px}
+.fld .val{margin-top:8px;display:flex;gap:6px}.fld .val input{flex:1;min-width:0}
+.fld .adv{display:none;margin-top:8px;gap:6px;grid-template-columns:1fr 1fr}
+.fld.open .adv{display:grid}.fld .adv input,.fld .adv select{width:100%;min-width:0;padding:8px 10px;font-size:13px}
+.fld .adv label{font-size:11px;color:var(--mut);display:block}
+.helpcta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 16px;margin:4px 0 16px;border-radius:16px;background:var(--tipbg);color:var(--tiptx);text-decoration:none;border:1px solid transparent}.helpcta:hover{border-color:var(--saffron)}.helpcta .hq{width:40px;height:40px;border-radius:12px;background:rgba(240,165,0,.18);color:var(--saffron);display:grid;place-items:center;flex:none}.helpcta .ht{flex:1;min-width:160px}.helpcta .ht b{display:block;font-size:15px}.helpcta .ht small{display:block;opacity:.85;margin-top:2px}.helpcta .btnlike{background:var(--saffron);color:#0B1220;font-weight:800;padding:10px 16px;border-radius:12px;font-size:13px;white-space:nowrap}
+.wlink{display:block;margin-top:10px;color:inherit;font-size:13px;text-decoration:none}.wlink b{color:var(--saffron)}.wlink:hover b{text-decoration:underline}
+.welcome{background:var(--tipbg);color:var(--tiptx);border-radius:16px;padding:14px 16px;margin-bottom:14px}
+.welcome ol{margin:8px 0 0 18px;padding:0}.welcome li{margin-bottom:6px}.welcome small{opacity:.85}.welcome a{color:inherit}
+.help p{margin:6px 0}.help h3{font-size:14px;margin:14px 0 4px}
+.warn{background:var(--tipbg);color:var(--tiptx);border-radius:14px;padding:12px 14px;margin-top:10px;font-size:13px}
+.langsw{display:flex;background:var(--bg);border:1px solid var(--bd);border-radius:12px;padding:3px;gap:2px;flex:none}.langsw button{border:0;background:none;box-shadow:none;font-weight:700;font-size:13px;padding:7px 12px;border-radius:9px;color:var(--mut)}.langsw button.on{background:var(--navy);color:#fff}
+@media (prefers-color-scheme:dark){.langsw button.on{background:var(--saffron);color:#0B1220}}
+#msg{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:10px 16px;border-radius:10px;display:none;font-weight:600;z-index:9}
+/* narrow: top bar with horizontal tabs */
+@media (max-width:760px){
+  .shell{flex-direction:column}
+  aside{padding:10px 12px 0}
+  .brand{padding-bottom:8px}
+  .tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+  .nav{border-radius:9px 9px 0 0;justify-content:center;padding:9px 4px;font-size:12px;gap:4px}
+  .nav .i{width:15px;height:15px;flex:none}
+  @media (max-width:380px){.nav{flex-direction:column;gap:2px;font-size:11px;padding:7px 2px}}
+  .foot{display:none}
+}
+/* wide: sidebar */
+@media (min-width:761px){
+  aside{width:250px;height:100vh;padding:20px 14px;display:flex;flex-direction:column;flex:none}
+  .brand{padding:4px 6px 18px}.mark{width:40px;height:40px}.mark svg{width:26px;height:26px}
+  .tabs{flex-direction:column}.nav{font-size:14px;padding:11px 12px}.nav.on{box-shadow:inset 3px 0 0 var(--saffron)}
+  .foot{margin-top:auto;font-size:11px;opacity:.7;padding:8px 6px}
+  main{padding:28px 32px}
+}
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none"><symbol id="pmark" viewBox="220 190 840 840"><path d="M244 214 H785 C927 214 1041 326 1041 467 C1041 612 932 732 784 732 V584 C846 584 894 535 894 472 C894 410 847 360 784 360 H388 V508 H317 C277 508 244 475 244 433 Z"/><path d="M244 588 H317 C356 588 388 620 388 662 V795 C475 628 627 433 784 433 V584 C696 589 606 676 525 783 L425 949 C399 992 340 1019 294 994 C263 978 244 947 244 908 Z"/></symbol><symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></symbol><symbol id="i-save" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8M7 3v5h8"/></symbol><symbol id="i-edit" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol><symbol id="i-broom" viewBox="0 0 24 24"><path d="M19 3 9 13M14 8l-8.5 8.5a3 3 0 0 0 4 4L18 12M6 18l-3 3"/></symbol><symbol id="i-export" viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5M4 17v3h16v-3"/></symbol><symbol id="i-import" viewBox="0 0 24 24"><path d="M12 15V3M7 10l5 5 5-5M4 17v3h16v-3"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></symbol><symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol><symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v6M14 11v6"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol><symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol><symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.7-4 3-9 3s-9-1.3-9-3M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/></symbol></svg>
+<div class="shell">
+<aside>
+  <div class="brand"><span class="mark"><svg><use href="#pmark"/></svg></span><div><h1>RTPS Pro <span>by PakkaScore</span></h1><small data-i="o_sub"></small></div><button id="backPop" class="backbtn hidden" type="button" aria-label="Back"><svg class="i" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg></button></div>
+  <nav class="tabs">
+    <a class="nav on" href="#settings" data-t="settings"><svg class="i"><use href="#i-gear"/></svg><span data-i="o_settings"></span></a>
+    <a class="nav" href="#editor" data-t="editor"><svg class="i"><use href="#i-users"/></svg><span data-i="o_profiles"></span></a>
+    <a class="nav" href="#backup" data-t="backup"><svg class="i"><use href="#i-db"/></svg><span data-i="o_backup"></span></a>
+    <a class="nav" href="#history" data-t="history"><svg class="i"><use href="#i-book"/></svg><span data-i="o_history"></span></a>
+    <a class="nav" href="#help" data-t="help"><svg class="i"><use href="#i-help"/></svg><span data-i="o_help"></span></a>
+  </nav>
+  <div class="foot"><span data-i="data_local"></span><br><a href="https://pakkascore.blogspot.com" target="_blank" rel="noopener" style="color:inherit;font-weight:700">PakkaScore · pakkascore.blogspot.com ↗</a></div>
+</aside>
+<main>
+  <div id="welcome" class="welcome hidden">
+    <b data-i="o_installed"></b>
+    <ol><li data-i="o_w1"></li><li data-i="o_w2"></li><li data-i="o_w3"></li><li data-i="o_w4"></li></ol>
+    <a class="wlink" href="https://pakkascore.github.io/rtps-pro/" target="_blank" rel="noopener"><span data-i="help_q"></span> <b data-i="help_link"></b></a>
+  </div>
+
+  <section class="card" id="settings">
+    <h2><svg class="i"><use href="#i-gear"/></svg><span data-i="o_settings"></span></h2>
+    <div class="opt"><div><span data-i="o_lang"></span><small data-i="o_lang_sub"></small></div><div class="langsw" id="langsw"><button data-lang="en">English</button><button data-lang="hi">हिन्दी</button></div></div>
+    <div class="opt"><div><span data-i="o_draft"></span><small data-i="o_draft_sub"></small></div><input type="checkbox" id="autoDraft"></div>
+    <div class="opt"><div><span data-i="o_hl"></span><small data-i="o_hl_sub"></small></div><input type="checkbox" id="highlight"></div>
+    <div class="opt"><div><span data-i="o_wait"></span><small data-i="o_wait_sub"></small></div><input type="number" id="dependentWait" min="1000" max="20000" step="500"></div>
+    <div class="opt kb-only hidden"><div><span data-i="o_kb"></span><small><kbd>Alt+Shift+F</kbd> fill · <kbd>Alt+Shift+S</kbd> save</small></div><button id="btnShortcuts" data-i="o_kb_change"></button></div>
+  </section>
+
+  <section class="card" id="editor">
+    <h2><svg class="i"><use href="#i-users"/></svg><span data-i="o_editor"></span></h2>
+    <div class="toolbar">
+      <select id="profileSel"></select>
+      <select id="formSel"></select>
+      <button id="btnRename" data-i="o_rename"></button>
+      <button id="btnDuplicate" data-i="o_dup"></button>
+      <button id="btnDeleteProfile" class="danger" data-i="o_del"></button>
+      <span style="flex:1"></span>
+      <button id="btnAddRow" data-i="o_addrow"></button>
+      <button id="btnSaveEdits" class="primary" data-i="o_savech"></button>
+      <button id="btnAdv" data-i-title="o_adv_t" data-i="o_adv"></button>
+    </div>
+    <div id="fields" class="fields"></div>
+    <p id="emptyHint" style="color:var(--mut)" data-i="o_empty"></p>
+  </section>
+
+  <section class="card" id="backup">
+    <h2><svg class="i"><use href="#i-db"/></svg><span data-i="o_backup"></span></h2>
+    <div class="toolbar">
+      <button id="btnExport" class="navy" data-i="o_export"></button>
+      <button id="btnImport" data-i="o_import"></button>
+      <input type="file" id="importFile" accept=".json" hidden>
+      <button id="btnWipe" class="danger" data-i="o_wipe"></button>
+    </div>
+    <small style="color:var(--mut)" data-i="o_import_note"></small>
+  </section>
+
+  <section class="card" id="history">
+    <h2><svg class="i"><use href="#i-book"/></svg><span data-i="o_history"></span></h2>
+    <div class="toolbar">
+      <button id="btnClearHistory" class="danger" data-i="o_clear_history"></button>
+      <span style="flex:1"></span>
+      <small style="color:var(--mut)" data-i="o_history_note"></small>
+    </div>
+    <div id="historyList" style="display:flex;flex-direction:column;gap:8px;margin-top:12px"></div>
+    <p id="historyEmpty" style="color:var(--mut)" data-i="o_history_empty"></p>
+  </section>
+
+  <section class="card help" id="help">
+    <h2><svg class="i"><use href="#i-help"/></svg><span data-i="o_help"></span></h2>
+    <a class="helpcta" href="https://pakkascore.github.io/rtps-pro/" target="_blank" rel="noopener"><span class="hq"><svg class="i"><use href="#i-help"/></svg></span><span class="ht"><b data-i="help_q"></b><small data-i="help_sub"></small></span><span class="btnlike" data-i="help_open"></span></a>
+    <h3 data-i="h_route_t"></h3><p data-i="h_route"></p>
+    <h3 data-i="h_which_t"></h3><p data-i="h_which"></p>
+    <h3 data-i="h_how_t"></h3><p data-i="h_how"></p>
+    <h3 data-i="h_count_t"></h3><p data-i="h_count"></p>
+    <h3 data-i="h_deep_t"></h3><p data-i="h_deep"></p><div class="warn" data-i="h_deep_warn"></div>
+    <h3 data-i="h_sw_t"></h3><p data-i="h_sw"></p>
+    <h3 data-i="h_priv_t"></h3><p data-i="h_priv"></p>
+    <h3 data-i="h_about_t"></h3><p data-i="h_about"></p>
+  </section>
+</main>
+</div>
+<div id="msg"></div>
+<script src="i18n.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

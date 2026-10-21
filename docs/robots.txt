@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pakkascore.github.io/rtps-pro/sitemap.xml

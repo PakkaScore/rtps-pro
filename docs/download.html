@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RTPS Pro डाउनलोड और इंस्टॉल — Firefox • Edge • Chrome | PakkaScore</title>
+<meta name="description" content="RTPS Pro डाउनलोड और इंस्टॉल गाइड: Firefox और Edge Android + desktop पर official store से auto-update, Chrome desktop पर zip से। हमेशा FREE।">
+<link rel="canonical" href="https://pakkascore.github.io/rtps-pro/download.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pakkascore.github.io/rtps-pro/download.html">
+<meta property="og:title" content="RTPS Pro डाउनलोड और इंस्टॉल — Firefox • Edge • Chrome | PakkaScore">
+<meta property="og:description" content="RTPS Pro डाउनलोड और इंस्टॉल गाइड: Firefox और Edge Android + desktop पर official store से auto-update, Chrome desktop पर zip से। हमेशा FREE।">
+<meta property="og:image" content="https://pakkascore.github.io/rtps-pro/assets/rtps-pro-og-1200x630.png">
+<meta name="theme-color" content="#0E1428">
+<link rel="icon" href="assets/github-social-preview-1280x640.png">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#0E1428;
+  --bg2:#12182A;
+  --card:#151E35;
+  --card2:#1B2747;
+  --border:rgba(255,255,255,.08);
+  --border2:rgba(255,255,255,.10);
+  --text:#F8FAFC;
+  --muted:#94A3B8;
+  --muted2:#64748B;
+  --saffron:#F0A500;
+  --saffron2:#FFB81C;
+  --saffron-glow:rgba(240,165,0,.18);
+  --green:#22C55E;
+  --green2:#16A34A;
+  --navy:#1B2A4A;
+  --navy2:#12182A;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background-color:var(--bg);
+  background-image:
+    radial-gradient(ellipse 800px 500px at 15% 0%, rgba(27,42,74,0.8) 0%, transparent 60%),
+    radial-gradient(ellipse 600px 400px at 85% 10%, rgba(240,165,0,0.15) 0%, transparent 60%);
+  color:var(--text);
+  font-family:'Geist',Inter,system-ui,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  min-height:100vh;
+}
+a{color:inherit;text-decoration:none}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+.mono{font-family:'Geist Mono',ui-monospace,monospace}
+
+/* Grid + vertical lines - optimized for zoom performance */
+.bg-grid{
+  position:fixed;inset:0;z-index:-2;
+  background-image:linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse at 50% 0%, black 35%, transparent 80%);
+  pointer-events:none;
+  will-change:transform;transform:translateZ(0);
+}
+.bg-lines{
+  position:fixed;inset:0;z-index:-2;
+  background-image:linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px);
+  background-size:60px 60px;
+  pointer-events:none;
+  opacity:.6;
+}
+.bg-glow{
+  position:fixed;top:-100px;left:50%;transform:translateX(-50%) translateZ(0);
+  width:900px;height:400px;z-index:-2;
+  background:radial-gradient(ellipse at center, rgba(27,42,74,0.5) 0%, rgba(240,165,0,0.06) 40%, transparent 70%);
+  pointer-events:none;
+  will-change:transform;
+}
+
+/* Header - minimal like open-autofill with navy tint */
+header{
+  position:sticky;top:0;z-index:20;
+  backdrop-filter:blur(20px);
+  background:rgba(14,20,40,0.75);
+  border-bottom:1px solid var(--border);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;letter-spacing:-.02em}
+.logo-mark{width:28px;height:28px;border-radius:7px;background:#fff;display:grid;place-items:center;flex-shrink:0}
+.logo-mark svg{width:16px;height:16px}
+.logo span{color:var(--muted);font-weight:500;font-size:13px;margin-left:2px}
+.nav-right{display:flex;align-items:center;gap:8px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  height:32px;padding:0 14px;border-radius:999px;
+  font-size:13px;font-weight:600;letter-spacing:-.01em;
+  border:1px solid var(--border);background:var(--card);
+  transition:.15s;cursor:pointer;white-space:nowrap;
+}
+.btn:hover{border-color:#3A3A3A;transform:translateY(-1px)}
+.btn-primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+.btn-primary:hover{background:#fff}
+.btn-saffron{background:var(--saffron);color:#000;border-color:var(--saffron);font-weight:700}
+.btn-saffron:hover{background:var(--saffron2)}
+.btn-ghost{background:transparent;border-color:transparent;color:var(--muted)}
+.btn-ghost:hover{color:var(--text);background:var(--card)}
+.btn-github{
+  display:inline-flex;align-items:center;gap:8px;
+  height:36px;padding:0 16px;border-radius:999px;
+  font-size:13px;font-weight:600;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);
+  color:var(--text);transition:.2s;
+}
+.btn-github:hover{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.16);transform:translateY(-1px)}
+.btn-hero{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  height:44px;padding:0 18px;border-radius:12px;
+  font-size:14px;font-weight:700;letter-spacing:-.01em;
+  transition:.15s;cursor:pointer;white-space:nowrap;
+  flex-shrink:0;min-width:0;
+}
+.btn-hero-primary{
+  background:#FFFFFF;color:#0A0A0A;border:1px solid #FFFFFF;
+  box-shadow:0 1px 2px rgba(0,0,0,.1), 0 4px 12px rgba(0,0,0,.2);
+}
+.btn-hero-primary:hover{background:#F8FAFC;transform:translateY(-1px);box-shadow:0 4px 20px rgba(0,0,0,.25)}
+.btn-hero-secondary{
+  background:rgba(255,255,255,.06);color:#E5E7EB;
+  border:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(8px);
+}
+.btn-hero-secondary:hover{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.18);transform:translateY(-1px)}
+
+/* Hero */
+.hero{padding:72px 0 24px;text-align:center;position:relative}
+@media(max-width:600px){.hero{padding:40px 0 16px}}
+.badge-top{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:7px 18px;border-radius:999px;
+  background:rgba(27,42,74,0.35);
+  border:1px solid rgba(240,165,0,0.30);
+  font-size:13px;color:#E5E7EB;font-family:'Geist',Inter,sans-serif;
+  font-weight:500;letter-spacing:-.01em;
+  margin-bottom:24px;transition:.15s;
+  text-decoration:none;
+}
+.badge-top:hover{
+  background:rgba(27,42,74,0.5);
+  border-color:rgba(240,165,0,0.45);
+}
+.badge-top .dot-green{
+  width:8px;height:8px;border-radius:50%;
+  background:#22C55E;box-shadow:0 0 10px rgba(34,197,94,.6);
+  flex-shrink:0;
+}
+.badge-top .arrow{opacity:.6;transition:.2s;font-size:14px;margin-left:2px}
+.badge-top:hover .arrow{opacity:1;transform:translateX(3px)}
+.hero h1{
+  font-family:'Poppins',sans-serif;
+  font-size:clamp(36px,6vw,64px);
+  line-height:1.08;letter-spacing:-.03em;
+  font-weight:800;margin:0 auto 18px;max-width:15ch;
+  word-spacing:0.04em;
+}
+.hero h1 span{color:var(--saffron)}
+.hero p.lede{
+  font-size:clamp(15px,2vw,17px);line-height:1.6;
+  color:var(--muted);max-width:52ch;margin:0 auto 28px;
+}
+.cta-row{
+  display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:nowrap;
+  margin-bottom:12px;
+}
+@media(max-width:480px){
+  .cta-row{
+    display:grid;grid-template-columns:1fr 1fr;gap:10px;
+    max-width:360px;margin:0 auto 12px;
+  }
+  .cta-row .btn-hero{
+    width:100%;height:44px;padding:0 12px;
+    font-size:13px;white-space:nowrap;
+  }
+}
+@media(max-width:360px){
+  .cta-row{ gap:8px; max-width:320px; }
+  .cta-row .btn-hero{ font-size:12px; padding:0 10px; height:42px; }
+}
+.hero-pills{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:18px}
+.pill{
+  font-size:12px;font-family:'Geist',Inter,sans-serif;
+  padding:2px 0;color:var(--muted);letter-spacing:.01em;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.pill::before{content:'✓';color:#F0A500;font-weight:700;font-size:12px}
+
+/* Dual mockup - real form + extension side by side, not cramped */
+.browser-wrap{max-width:760px;margin:48px auto 0;position:relative}
+.browser{
+  background:linear-gradient(180deg, #1E2D55 0%, #151E35 100%);
+  border:1px solid rgba(240,165,0,.15);
+  border-radius:16px;overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(240,165,0,.10);
+  text-align:left;
+  will-change:transform;transform:translateZ(0);
+}
+.browser-top{
+  height:44px;display:flex;align-items:center;gap:12px;
+  padding:0 14px;background:rgba(21,30,53,0.9);border-bottom:1px solid rgba(255,255,255,.08);
+}
+.dots{display:flex;gap:7px}
+.dot{width:12px;height:12px;border-radius:50%}
+.dot.r{background:#FF5F56}.dot.y{background:#FFBD2E}.dot.g{background:#27C93F}
+.addr{
+  flex:1;max-width:420px;margin:0 auto;
+  height:28px;background:rgba(255,255,255,.06);border-radius:999px;
+  display:flex;align-items:center;gap:8px;padding:0 12px;
+  font-family:'Geist Mono',monospace;font-size:12px;color:var(--muted);
+  border:1px solid rgba(255,255,255,.08);
+}
+.addr svg{width:12px;height:12px;flex-shrink:0}
+.ext-icon{
+  width:28px;height:28px;border-radius:8px;background:var(--navy);
+  display:grid;place-items:center;border:1px solid #2A3A5A;flex-shrink:0;
+}
+.ext-icon svg{width:14px;height:14px}
+
+/* Form demo inside - with subtle brand gradient */
+.form-demo{padding:20px 20px 16px;background:linear-gradient(180deg, #121A30 0%, #0E1428 100%)}
+.form-demo-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.form-demo-head h3{font-size:15px;font-weight:700;margin:0;letter-spacing:-.02em}
+.form-demo-head p{font-size:12px;color:var(--muted);margin:2px 0 0}
+.status-pill{
+  font-size:11px;font-family:'Geist Mono',monospace;
+  padding:4px 10px;border-radius:999px;
+  background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);
+  color:var(--green);display:inline-flex;align-items:center;gap:6px;
+}
+.status-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+.f-group{display:flex;flex-direction:column;gap:6px}
+.f-label{font-size:11px;color:var(--muted2);font-weight:500;letter-spacing:.02em}
+.f-input{
+  height:38px;padding:0 12px;border-radius:10px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  font-size:13px;color:var(--text);display:flex;align-items:center;justify-content:space-between;
+  transition:.15s;backdrop-filter:blur(4px);
+}
+.f-input.filled{border-color:rgba(34,197,94,.5);background:rgba(34,197,94,.08);box-shadow:0 0 0 3px rgba(34,197,94,.10)}
+.f-input .chev{color:var(--muted2);font-size:12px}
+.f-actions{display:flex;align-items:center;gap:10px;margin-top:18px;flex-wrap:wrap}
+.f-check{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.f-check-box{width:18px;height:18px;border-radius:5px;background:var(--green);display:grid;place-items:center;color:#000;font-size:12px;font-weight:700}
+.btn-fill{
+  height:40px;padding:0 18px;border-radius:10px;
+  background:var(--text);color:var(--bg);border:0;
+  font-size:13px;font-weight:700;letter-spacing:-.01em;
+  display:inline-flex;align-items:center;gap:8px;cursor:pointer;
+}
+
+/* Real form from PDF */
+.real-form{padding:18px 18px 14px}
+.real-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:600px){.real-grid{grid-template-columns:1fr 1fr;gap:8px}}
+@media(max-width:400px){.real-grid{gap:6px}}
+.rf-group{display:flex;flex-direction:column;gap:5px;min-width:0}
+
+/* Dropdown arrow like open-autofill Country field */
+.rf-input[data-type="select"]{
+  position:relative;
+  padding-right:32px;
+}
+.rf-input[data-type="select"]::after{
+  content:'';
+  position:absolute;
+  right:12px;
+  top:50%;
+  width:12px;
+  height:7px;
+  transform:translateY(-50%);
+  pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7' fill='none'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%2364748B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-size:12px 7px;
+  opacity:.8;
+}
+.rf-input[data-type="select"].filled::after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7' fill='none'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%2394A3B8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.rf-input[data-type="select"].filled::after{
+  color:#94A3B8;
+}
+
+.rf-label{font-size:10px;color:#94A3B8;font-weight:500;letter-spacing:.02em;text-transform:uppercase}
+.rf-input{
+  height:40px;padding:0 10px;border-radius:10px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  font-size:12px;color:#E2E8F0;display:flex;align-items:center;justify-content:space-between;
+  will-change:border-color,background-color;transform:translateZ(0);
+}
+.rf-input.filled{border-color:rgba(34,197,94,.45);background:rgba(34,197,94,.07)}
+
+.rf-input.typing{
+  border-color:rgba(240,165,0,.65);
+  background:rgba(240,165,0,.12);
+  box-shadow:0 0 0 3px rgba(240,165,0,.20), 0 0 20px rgba(240,165,0,.20);
+}
+/* No cursor | icon - only color change */
+.rf-input.filled{border-color:rgba(34,197,94,.5);background:rgba(34,197,94,.08);box-shadow:0 0 0 3px rgba(34,197,94,.10)}
+
+.rf-check{color:#22C55E;font-size:11px;font-weight:700}
+.chev{color:#64748B;font-size:10px}
+
+
+
+/* Stats grid - now 2 boxes only: 6 forms + 1 tap */
+.stats{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--border2);background:var(--bg2);
+  margin-top:0;
+}
+.stat{
+  padding:28px 20px;text-align:center;
+  border-right:1px solid var(--border2);
+}
+.stat:nth-child(2n){border-right:0}
+.stat b{
+  font-family:'Poppins',sans-serif;
+  font-size:clamp(24px,4vw,32px);line-height:1.1;
+  letter-spacing:-.03em;display:block;margin-bottom:8px;
+}
+.stat span{
+  font-size:11px;color:var(--muted2);font-family:'Geist Mono',monospace;
+  letter-spacing:.02em;line-height:1.4;display:block;max-width:22ch;margin:0 auto;
+}
+
+
+/* Sections - adapted from Claude liked design */
+/* Performance: disable heavy effects during zoom */
+body.is-zooming *{
+  transition:none !important;
+  animation:none !important;
+}
+body.is-zooming .bg-grid,
+body.is-zooming .bg-lines,
+body.is-zooming .bg-glow{
+  display:none !important;
+}
+body.is-zooming .browser,
+body.is-zooming .rf-input,
+body.is-zooming .card,
+body.is-zooming .guide-pro,
+body.is-zooming .screen{
+  will-change:auto !important;
+  transform:none !important;
+  box-shadow:none !important;
+}
+
+section{padding:72px 0;border-top:1px solid rgba(255,255,255,.06);content-visibility:auto;contain-intrinsic-size:0 500px}
+@media(max-width:600px){section{padding:48px 0}}
+.sec-head{max-width:640px;margin:0 auto 44px;text-align:center}
+.sec-head .kicker{
+  font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--saffron);margin-bottom:12px;
+}
+.sec-head h2{
+  font-family:'Poppins',sans-serif;
+  font-size:clamp(26px,4vw,42px);line-height:1.1;letter-spacing:-.034em;
+  margin:0 0 12px;font-weight:800;
+}
+.sec-head p{color:var(--muted);font-size:15px;margin:0 auto;line-height:1.7;max-width:52ch}
+.sec-head.left{ text-align:left; margin:0 0 36px; }
+.sec-head.left p{ margin:0; }
+
+/* What it does - like screenshot 1 */
+.kicker{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--saffron);margin-bottom:10px}
+.grid-3{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:700px){.grid-3{grid-template-columns:1fr}}
+@media(max-width:900px){.grid-3{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.grid-3{grid-template-columns:1fr}}
+.card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;padding:22px 20px;transition:.22s;
+  position:relative;overflow:hidden;
+  backdrop-filter:blur(8px);
+}
+.card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg, transparent, var(--saffron), transparent);
+  opacity:0;transition:.25s;
+}
+.card:hover{border-color:rgba(240,165,0,.20);background:rgba(255,255,255,.06)}
+.card:hover::after{opacity:1}
+.card .icon{
+  width:42px;height:42px;border-radius:12px;
+  background:rgba(240,165,0,.10);border:1px solid rgba(240,165,0,.18);
+  display:grid;place-items:center;font-size:18px;margin-bottom:16px;
+}
+.card h3{font-size:16px;font-weight:700;margin:0 0 8px;letter-spacing:-.02em;color:var(--text)}
+.card p{font-size:13.5px;color:#94A3B8;margin:0;line-height:1.65}
+.card.active{border-color:rgba(240,165,0,.35);box-shadow:0 0 0 1px rgba(240,165,0,.12) inset}
+.card.active::after{opacity:1}
+
+/* Screens - landscape + scrollable per user request */
+.screens{
+  display:flex;gap:16px;
+  overflow-x:auto;overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  scroll-snap-type:x mandatory;
+  padding:4px 2px 16px;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(255,255,255,.15) transparent;
+}
+.screens::-webkit-scrollbar{ height:6px; }
+.screens::-webkit-scrollbar-thumb{ background:rgba(255,255,255,.15); border-radius:999px; }
+.screens::-webkit-scrollbar-track{ background:transparent; }
+.screen{
+  flex:0 0 340px;
+  scroll-snap-align:start;
+  background:linear-gradient(180deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.02) 100%), var(--card);
+  border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;
+  transition:.22s;
+}
+@media(max-width:600px){ .screen{ flex:0 0 300px; } }
+.screen:hover{border-color:rgba(240,165,0,.20);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.screen img{
+  width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top center;
+  display:block;background:#0E1428;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.screen-cap{
+  padding:12px 14px;font-size:12px;color:var(--muted);
+  font-family:'Geist Mono',monospace;background:rgba(255,255,255,.02);
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+}
+.screen-cap::after{
+  content:'↔';font-size:11px;opacity:.4;
+}
+
+/* Steps - like screenshot 2 - Three steps centered */
+.steps-centered{
+  max-width:680px;margin:0 auto;
+  display:flex;flex-direction:column;gap:48px;
+  text-align:center;
+}
+.step-c{
+  display:flex;flex-direction:column;align-items:center;gap:0;
+}
+.step-num-saff{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--saffron);color:var(--navy);
+  font-family:'Poppins',sans-serif;font-weight:900;font-size:18px;
+  display:grid;place-items:center;margin:0 auto 16px;
+  box-shadow:0 0 0 6px rgba(240,165,0,.14), 0 4px 16px rgba(240,165,0,.25);
+  flex-shrink:0;
+}
+.step-c h3{
+  font-family:'Poppins',sans-serif;
+  font-size:20px;font-weight:700;color:var(--text);margin:0 0 12px;
+  letter-spacing:-.02em;
+}
+.step-c p{
+  font-size:14.5px;color:#94A3B8;line-height:1.7;max-width:56ch;margin:0 auto;
+}
+.step-c p em, .step-c p strong{
+  color:var(--saffron);font-style:normal;font-weight:600;
+}
+/* Legacy steps keep for other sections */
+.steps{display:grid;gap:12px;max-width:760px;margin:0 auto}
+.step{
+  display:flex;gap:16px;padding:18px;
+  background:linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.01) 100%), var(--card);
+  border:1px solid var(--border);border-radius:16px;transition:.2s;
+}
+.step:hover{border-color:rgba(255,255,255,.10);background:linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.02) 100%), #1A2340}
+.step-num{
+  flex-shrink:0;width:40px;height:40px;border-radius:10px;
+  background:rgba(255,255,255,.05);border:1px solid var(--border);
+  display:grid;place-items:center;
+  font-family:'Geist Mono',monospace;font-size:12px;font-weight:700;color:var(--muted);
+}
+.step h3{font-size:14px;font-weight:700;margin:0 0 4px}
+.step p{font-size:13px;color:var(--muted);margin:0;line-height:1.5}
+
+/* Install */
+.install{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:900px){.install{grid-template-columns:1fr}}
+.install-card{
+  background:linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.01) 100%), var(--card);
+  border:1px solid var(--border);border-radius:16px;padding:18px;position:relative;transition:.2s;
+}
+.install-card:hover{border-color:rgba(255,255,255,.12)}
+.install-card.rec{border-color:rgba(240,165,0,.35);background:linear-gradient(180deg, rgba(240,165,0,.10) 0%, rgba(240,165,0,.03) 40%, var(--card) 100%);box-shadow:0 0 0 1px rgba(240,165,0,.15), 0 8px 30px rgba(240,165,0,.10)}
+.rec-badge{
+  position:absolute;top:12px;right:12px;
+  font-size:10px;font-weight:700;letter-spacing:.08em;
+  background:var(--saffron);color:#000;padding:3px 8px;border-radius:999px;
+  font-family:'Geist Mono',monospace;
+}
+.install-card h3{font-size:14px;margin:0 0 6px}
+.install-card p{font-size:12px;color:var(--muted);margin:0 0 12px;line-height:1.5}
+.install-card ul{margin:0 0 14px;padding-left:16px;color:var(--muted);font-size:12px}
+.install-card li{margin:4px 0}
+
+/* Guides */
+.guides-pro{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+  max-width:760px;margin:0 auto;
+}
+@media(max-width:700px){.guides-pro{grid-template-columns:1fr}}
+.guide-pro{
+  position:relative;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;padding:24px;
+  display:flex;flex-direction:column;gap:14px;
+  transition:.22s;overflow:hidden;
+  backdrop-filter:blur(8px);
+  cursor:pointer;
+}
+.guide-pro::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg, transparent, var(--saffron), transparent);
+  opacity:0;transition:.25s;
+}
+.guide-pro:hover{
+  border-color:rgba(240,165,0,.22);background:rgba(255,255,255,.06);
+  transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.35);
+}
+.guide-pro:hover::after{ opacity:1; }
+.guide-pro:active, .guide-pro:focus-within, .guide-pro.clicked{
+  border-color:rgba(240,165,0,.45);
+  background:linear-gradient(180deg, rgba(240,165,0,.10) 0%, rgba(255,255,255,.06) 60%);
+  box-shadow:0 0 0 1px rgba(240,165,0,.20) inset, 0 0 30px rgba(240,165,0,.18), 0 12px 40px rgba(0,0,0,.35);
+  transform:translateY(-1px) scale(.99);
+}
+.guide-pro:active::after, .guide-pro:focus-within::after, .guide-pro.clicked::after{ opacity:1; }
+.guide-pro.rec{
+  border-color:rgba(255,255,255,.08);
+  background:rgba(255,255,255,.04);
+}
+.guide-pro.rec:hover{
+  border-color:rgba(240,165,0,.30);
+  background:linear-gradient(180deg, rgba(240,165,0,.08) 0%, rgba(255,255,255,.04) 60%);
+}
+.guide-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:rgba(240,165,0,.10);border:1px solid rgba(240,165,0,.18);
+  display:grid;place-items:center;font-size:20px;
+}
+.guide-pro h3{
+  font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;
+  margin:0;letter-spacing:-.02em;color:var(--text);
+}
+.guide-pro p{
+  font-size:13.5px;color:#94A3B8;margin:0;flex:1;line-height:1.65;
+}
+.guide-meta{
+  display:flex;gap:8px;flex-wrap:wrap;margin-top:2px;
+}
+.guide-meta span{
+  font-size:10.5px;font-family:'Geist Mono',monospace;
+  padding:4px 10px;border-radius:999px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);
+  color:rgba(255,255,255,.55);letter-spacing:.02em;
+}
+.btn-guide{
+  display:inline-flex;align-items:center;justify-content:space-between;
+  gap:10px;height:44px;padding:0 18px;border-radius:12px;
+  font-size:14px;font-weight:600;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);
+  color:var(--text);transition:.2s;cursor:pointer;
+  margin-top:6px;
+}
+.btn-guide:hover{
+  background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.16);
+  transform:translateY(-1px);
+}
+.btn-guide-primary{
+  background:#FFFFFF;color:#0A0A0A;border-color:#FFFFFF;
+  font-weight:700;
+  box-shadow:0 1px 2px rgba(0,0,0,.1), 0 4px 12px rgba(0,0,0,.15);
+}
+.btn-guide-primary:hover{
+  background:#F8FAFC;transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.2);
+}
+.btn-guide .arrow{ transition:.2s; }
+.btn-guide:hover .arrow{ transform:translateX(3px); }
+.rec-badge{
+  position:absolute;top:14px;right:14px;
+  font-size:10px;font-weight:700;letter-spacing:.06em;
+  background:var(--saffron);color:#000;padding:4px 10px;border-radius:999px;
+  font-family:'Geist Mono',monospace;
+}
+
+/* FAQ - like screenshot 3 */
+.faq-list{ display:flex;flex-direction:column;gap:10px;max-width:760px;margin:0 auto; }
+.faq-item{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;overflow:hidden;
+  transition:.2s;
+}
+.faq-item:hover{ border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.06); }
+.faq-item summary{
+  list-style:none;cursor:pointer;
+  padding:18px 20px;
+  font-size:15px;font-weight:600;color:var(--text);
+  display:flex;justify-content:space-between;align-items:center;
+  gap:16px;user-select:none;
+}
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-chev{
+  flex-shrink:0;width:28px;height:28px;border-radius:50%;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);
+  display:grid;place-items:center;font-size:11px;color:var(--muted);transition:.2s;
+}
+.faq-item[open] .faq-chev{ transform:rotate(180deg); background:rgba(240,165,0,.12); color:var(--saffron); border-color:rgba(240,165,0,.18); }
+.faq-body{ padding:0 20px 18px; font-size:13.5px;color:#94A3B8;line-height:1.7; }
+.faq-body a{ color:var(--saffron); text-decoration:underline; text-underline-offset:2px; }
+/* Legacy faq grid keep hidden */
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:700px){.faq-grid{grid-template-columns:1fr}}
+.faq{padding:16px}
+.faq h3{font-size:13px;margin:0 0 6px}
+.faq p{font-size:12px;color:var(--muted);margin:0;line-height:1.6}
+
+/* CTA - brand gradient */
+.cta{
+  background:linear-gradient(135deg, #1B2A4A 0%, #1E2F52 40%, #2A3A5A 70%, #F0A500 100%);
+  color:#fff;
+  border-radius:20px;padding:28px;position:relative;overflow:hidden;
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 0 0 1px rgba(255,255,255,.06), 0 20px 60px rgba(0,0,0,.4), 0 0 80px rgba(240,165,0,.15);
+}
+.cta::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 20% 20%, rgba(240,165,0,.25) 0%, transparent 50%),
+             radial-gradient(ellipse at 80% 80%, rgba(255,255,255,.08) 0%, transparent 50%);
+  pointer-events:none;
+}
+.cta h3{font-family:'Poppins',sans-serif;font-size:22px;line-height:1.1;letter-spacing:-.03em;margin:0 0 8px;color:#fff;position:relative;z-index:1}
+.cta h3 span{color:var(--saffron)}
+.cta p{font-size:13px;color:rgba(255,255,255,.75);margin:0;max-width:50ch;line-height:1.5;position:relative;z-index:1}
+.cta .btn{background:#fff;color:var(--navy);border-color:#fff;position:relative;z-index:1}
+.cta .btn:hover{background:var(--saffron);border-color:var(--saffron);color:#000}
+.cta .btn:nth-child(2){background:rgba(255,255,255,.10);color:#fff;border-color:rgba(255,255,255,.20);backdrop-filter:blur(8px)}
+.cta .btn:nth-child(2):hover{background:rgba(255,255,255,.18)}
+
+/* Footer - adapted from Claude + brand mix wordmark */
+footer{
+  border-top:1px solid rgba(255,255,255,.08);
+  padding:26px 0 32px;
+  padding-bottom:max(32px, env(safe-area-inset-bottom, 0px));
+}
+.foot{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:14px;
+}
+.foot-brand{
+  display:flex;flex-direction:column;align-items:flex-start;gap:6px;
+  min-width:220px;
+}
+.foot-links{ display:flex;gap:16px;flex-wrap:wrap;align-items:center; }
+.foot-links a{ font-size:13px;color:rgba(255,255,255,.45);transition:.15s; }
+.foot-links a:hover{ color:var(--text); }
+.foot-right{ font-size:12px;color:rgba(255,255,255,.35);align-self:flex-start;margin-top:2px; }
+.foot-built{
+  font-size:12px;color:rgba(255,255,255,.65);font-weight:500;
+  margin-top:4px;
+}
+.foot-notaff{
+  font-size:11px;color:rgba(255,255,255,.35);line-height:1.5;
+  max-width:32ch;
+}
+/* ===== Pro Article System v2 - Mobile Fixed ===== */
+.page-hero{
+  max-width:800px;margin:0 auto;
+  padding:48px 20px 28px;
+}
+@media(max-width:640px){ .page-hero{padding:28px 16px 20px} }
+.kicker-pro{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Geist Mono',monospace;
+  font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--saffron);background:rgba(240,165,0,.08);
+  border:1px solid rgba(240,165,0,.18);padding:7px 14px;border-radius:999px;
+  margin-bottom:16px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;
+}
+@media(max-width:400px){ .kicker-pro{font-size:10px;padding:6px 10px;letter-spacing:.12em} }
+.page-hero h1{
+  font-family:'Poppins',sans-serif;
+  font-size:clamp(28px,5vw,44px);line-height:1.08;letter-spacing:-.04em;
+  font-weight:800;color:var(--text);margin:0 0 14px;
+}
+.page-hero h1 span{color:var(--saffron)}
+.page-hero .lead{
+  font-size:clamp(14.5px,2vw,17px);line-height:1.6;color:#94A3B8;
+  margin:0 0 18px;max-width:60ch;
+}
+.meta-row{
+  display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 22px;
+  align-items:center;
+}
+@media(max-width:480px){ .meta-row{gap:6px} }
+.meta-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'Geist Mono',monospace;font-size:11px;font-weight:600;
+  padding:6px 12px;border-radius:999px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#CBD5E1;
+  white-space:nowrap;line-height:1;
+}
+@media(max-width:480px){ .meta-pill{font-size:10px;padding:5px 10px} }
+.meta-pill.saffron{background:rgba(240,165,0,.12);border-color:rgba(240,165,0,.24);color:var(--saffron)}
+.meta-pill.dot{padding-left:10px}
+.meta-pill.dot::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:#22C55E;box-shadow:0 0 0 3px rgba(34,197,94,.18);
+  display:inline-block;flex-shrink:0;
+}
+.cta-hero-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+@media(max-width:480px){
+  .cta-hero-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .cta-hero-row .btn-hero{width:100%;justify-content:center;padding:0 12px;font-size:13px;height:42px}
+}
+.page-layout{
+  max-width:1120px;margin:0 auto;padding:0 20px 64px;
+  display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:start;
+}
+@media(max-width:960px){
+  .page-layout{grid-template-columns:1fr;gap:20px;padding:0 16px 48px}
+}
+.article-pro{
+  max-width:800px;min-width:0;
+  background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);
+  border-radius:24px;padding:32px;
+}
+@media(max-width:640px){ .article-pro{padding:20px 16px;border-radius:18px} }
+.article-pro h2{
+  font-family:'Poppins',sans-serif;font-size:clamp(18px,3vw,22px);line-height:1.25;letter-spacing:-.02em;
+  font-weight:700;color:var(--text);margin:40px 0 14px;padding:0;
+  display:flex;align-items:center;gap:10px;
+}
+.article-pro h2:first-child{margin-top:0}
+.article-pro h2 .h2-icon{
+  width:28px;height:28px;border-radius:8px;background:rgba(240,165,0,.12);
+  border:1px solid rgba(240,165,0,.18);display:grid;place-items:center;
+  font-size:14px;flex-shrink:0;
+}
+.article-pro h3{
+  font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;
+  color:var(--text);margin:28px 0 10px;
+}
+.article-pro p{font-size:14.5px;line-height:1.75;color:#CBD5E1;margin:0 0 16px;overflow-wrap:break-word}
+.article-pro a{color:var(--saffron);text-decoration:none;border-bottom:1px solid rgba(240,165,0,.28)}
+.article-pro a:hover{color:#FFC233;border-bottom-color:rgba(240,165,0,.5)}
+.article-pro ul,.article-pro ol{margin:0 0 18px;padding-left:22px;color:#CBD5E1}
+.article-pro li{margin:8px 0;font-size:14px;line-height:1.65}
+.article-pro li::marker{color:var(--saffron)}
+.article-pro small{color:var(--muted);font-size:12px;display:block;margin-top:6px}
+.table-wrap{
+  margin:18px 0 22px;
+  overflow-x:auto;-webkit-overflow-scrolling:touch;
+  border-radius:16px;border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.02);
+  scrollbar-width:thin;
+}
+.table-wrap::-webkit-scrollbar{height:6px}
+.table-wrap::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:999px}
+.table-wrap table{width:100%;min-width:560px;border-collapse:collapse;font-size:13.5px}
+.table-wrap th{
+  font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  font-weight:700;color:#94A3B8;background:rgba(255,255,255,.04);
+  padding:12px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08);white-space:nowrap;
+}
+.table-wrap td{
+  padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.06);color:#CBD5E1;vertical-align:top;
+}
+.table-wrap tr:last-child td{border-bottom:none}
+.forms-grid-pro{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0;
+}
+@media(max-width:640px){ .forms-grid-pro{grid-template-columns:1fr} }
+.form-card-pro{
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);
+  border-radius:16px;padding:16px;transition:.18s;
+}
+.form-card-pro:hover{border-color:rgba(240,165,0,.22);background:rgba(255,255,255,.04)}
+.form-card-pro b{font-family:'Poppins',sans-serif;font-size:13.5px;color:var(--text);display:block;margin-bottom:4px}
+.form-card-pro span.hi{font-size:12px;color:var(--saffron);font-weight:600;display:block;margin-bottom:6px}
+.form-card-pro p{font-size:12.5px;line-height:1.5;color:#94A3B8;margin:0}
+.feat-grid-pro{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+@media(max-width:640px){ .feat-grid-pro{grid-template-columns:1fr} }
+.feat-card-pro{
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);
+  border-radius:16px;padding:18px;position:relative;overflow:hidden;
+}
+.feat-card-pro::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg, transparent, rgba(240,165,0,.5), transparent);opacity:0;transition:.2s;
+}
+.feat-card-pro:hover::after{opacity:1}
+.feat-icon-pro{
+  width:36px;height:36px;border-radius:10px;background:rgba(240,165,0,.10);
+  border:1px solid rgba(240,165,0,.18);display:grid;place-items:center;
+  font-size:16px;margin-bottom:12px;
+}
+.feat-card-pro h4{font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin:0 0 6px}
+.feat-card-pro p{font-size:12.8px;line-height:1.6;color:#94A3B8;margin:0}
+.steps-pro{margin:18px 0;display:flex;flex-direction:column;gap:14px}
+.step-pro{
+  display:grid;grid-template-columns:44px 1fr;gap:14px;
+  background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;padding:16px;min-width:0;
+}
+@media(max-width:480px){ .step-pro{grid-template-columns:36px 1fr;gap:10px;padding:14px} }
+.step-num-pro{
+  width:44px;height:44px;border-radius:12px;background:var(--saffron);color:#0A0A0A;
+  font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;display:grid;place-items:center;
+  box-shadow:0 6px 18px rgba(240,165,0,.22);flex-shrink:0;
+}
+@media(max-width:480px){ .step-num-pro{width:36px;height:36px;font-size:13px;border-radius:10px} }
+.step-pro h4{font-size:14.5px;font-weight:700;color:var(--text);margin:0 0 6px;font-family:'Poppins',sans-serif}
+.step-pro p{font-size:13px;line-height:1.6;color:#94A3B8;margin:0 0 8px}
+.step-pro ul{margin:8px 0 0}
+.shot-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0;
+}
+@media(max-width:640px){ .shot-grid{grid-template-columns:1fr} }
+.shot-card{
+  background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;overflow:hidden;
+}
+.shot-card img{width:100%;height:auto;display:block;border:none;border-radius:0;max-width:100%}
+.shot-cap{padding:10px 14px;font-size:11.5px;color:#94A3B8;border-top:1px solid rgba(255,255,255,.06);line-height:1.4}
+.callout{
+  display:flex;gap:12px;padding:14px 16px;border-radius:14px;margin:18px 0;
+  border:1px solid;font-size:13.5px;line-height:1.6;min-width:0;
+}
+.callout.saffron{background:rgba(240,165,0,.08);border-color:rgba(240,165,0,.18);color:#FDE68A}
+.callout.blue{background:rgba(59,130,246,.08);border-color:rgba(59,130,246,.18);color:#BFDBFE}
+.callout.green{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.18);color:#BBF7D0}
+.callout-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+.install-grid-pro{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+@media(max-width:720px){ .install-grid-pro{grid-template-columns:1fr} }
+.install-card-pro{
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;padding:20px;position:relative;overflow:hidden;min-width:0;
+}
+.install-card-pro.rec{border-color:rgba(240,165,0,.32);background:linear-gradient(180deg, rgba(240,165,0,.08), rgba(255,255,255,.03))}
+.install-card-pro.rec::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg, transparent, var(--saffron), transparent);
+}
+.install-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;min-width:0}
+.install-icon{
+  width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+  font-size:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);flex-shrink:0;
+}
+.install-card-pro h4{font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:var(--text);margin:0}
+.install-card-pro .sub{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.3}
+.install-card-pro p{font-size:13px;line-height:1.6;color:#94A3B8;margin:10px 0 14px}
+.badge-rec{
+  position:absolute;top:12px;right:12px;
+  font-family:'Geist Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--saffron);color:#0A0A0A;padding:4px 8px;border-radius:999px;
+}
+@media(max-width:480px){ .badge-rec{position:static;margin-bottom:10px;display:inline-block} }
+.side{
+  position:sticky;top:84px;display:flex;flex-direction:column;gap:16px;min-width:0;
+}
+@media(max-width:960px){
+  .side{position:static;order:2;margin-top:0}
+}
+.side-card{
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;padding:18px;min-width:0;
+}
+.side-card h4{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin:0 0 12px}
+.toc-pro{list-style:none;margin:0;padding:0}
+.toc-pro li{margin:0}
+.toc-pro a{
+  display:block;padding:7px 10px;border-radius:8px;
+  font-size:13px;color:#94A3B8;text-decoration:none;border:none;
+  transition:.15s;line-height:1.4;
+}
+.toc-pro a:hover{background:rgba(255,255,255,.05);color:var(--text)}
+.progress-bar{
+  position:fixed;top:0;left:0;height:2px;background:var(--saffron);
+  width:0%;z-index:100;transition:width .1s linear;
+}
+@media(max-width:960px){
+  .toc-mobile{display:block !important}
+  .toc-desktop{display:none}
+}
+@media(min-width:961px){
+  .toc-mobile{display:none !important}
+}
+.toc-mobile{
+  display:none;
+  margin:0 0 16px;
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;padding:12px;
+}
+.toc-mobile summary{
+  font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--text);
+  cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;
+}
+.toc-mobile summary::-webkit-details-marker{display:none}
+.toc-mobile .toc-pro{margin-top:10px}
+
+</style>
+</head>
+<body>
+<div class="bg-grid"></div>
+<div class="bg-lines"></div>
+<div class="bg-glow"></div>
+<header>
+<div class="container nav">
+<a class="logo" href="index.html">
+<span class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="220 190 840 840"><path fill="#1B2A4A" d="M244 214 H785 C927 214 1041 326 1041 467 C1041 612 932 732 784 732 V584 C846 584 894 535 894 472 C894 410 847 360 784 360 H388 V508 H317 C277 508 244 475 244 433 Z"/><path fill="#1B2A4A" d="M244 588 H317 C356 588 388 620 388 662 V795 C475 628 627 433 784 433 V584 C696 589 606 676 525 783 L425 949 C399 992 340 1019 294 994 C263 978 244 947 244 908 Z"/></svg></span>
+RTPS Pro
+
+</a>
+<div class="nav-right">
+<a class="btn btn-github" href="index.html">← Home</a>
+<a class="btn btn-github" href="https://github.com/PakkaScore/rtps-pro" target="_blank" rel="noopener">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.775.42-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+GitHub
+</a>
+</div>
+</div>
+</header>
+
+<div class="progress-bar" id="progress"></div>
+<div class="page-hero">
+<div class="kicker-pro">📥 DOWNLOAD • v3.9.7 • MIT • ALWAYS FREE</div>
+<h1>Download & <span>install</span></h1>
+<p class="lead">Firefox & Edge Android + desktop पर official store से auto-update। Chrome desktop पर zip से। Quetta / Kiwi optional। हमेशा FREE।</p>
+</div>
+
+<div class="page-layout">
+<div class="article-pro" id="article">
+
+<details class="toc-mobile"><summary>Install options <span>▼</span></summary>
+<ul class="toc-pro">
+<li><a href="#choose">Choose browser</a></li>
+<li><a href="#firefox">Firefox steps</a></li>
+<li><a href="#edge">Edge steps</a></li>
+<li><a href="#chrome">Chrome zip</a></li>
+<li><a href="#compare">Comparison</a></li>
+</ul>
+</details>
+
+<h2 id="choose"><span class="h2-icon">⬇️</span> Choose your browser</h2>
+<p><b>RTPS Pro by PakkaScore</b> मुफ़्त, open-source extension है — Bihar RTPS फॉर्म एक बार सेव, अगली बार एक टैप में Auto-fill। 6 फॉर्म: जाति, आय, निवास, OBC-NCL, NCL, EWS। कोई account नहीं, data आपके device में।</p>
+
+<div class="install-grid-pro">
+<div class="install-card-pro rec">
+<span class="badge-rec">Recommended</span>
+<div class="install-head"><div class="install-icon" style="background:rgba(255,113,57,.12);border-color:rgba(255,113,57,.22)">🦊</div><div><h4>Firefox</h4><div class="sub">Android + Windows / Mac / Linux • auto-update</div></div></div>
+<p>Add to Firefox → Add. Menu (⋮) → Extensions → RTPS Pro. सबसे stable — RTPS साइट Chrome/Edge पर कभी-कभी NET::ERR_CERT_AUTHORITY_INVALID दिखाता है, Firefox में ठीक खुलती है। RTPS portal खुद Firefox recommend करता है।</p>
+<a class="btn-hero btn-hero-primary" href="https://addons.mozilla.org/firefox/addon/rtps-pro/" target="_blank" style="width:100%;text-decoration:none;justify-content:center">Add to Firefox</a>
+</div>
+
+<div class="install-card-pro rec" style="border-color:rgba(50,152,219,.28)">
+<div class="install-head"><div class="install-icon" style="background:rgba(50,152,219,.12);border-color:rgba(50,152,219,.22)">🌊</div><div><h4>Edge</h4><div class="sub">Android + Windows / Mac • auto-update</div></div></div>
+<p>Edge Add-ons → Get → Add extension. Menu (☰) → Extensions → RTPS Pro. Android + desktop दोनों official store से।</p>
+<a class="btn-hero btn-hero-primary" href="https://microsoftedge.microsoft.com/addons/detail/gdicmdfikcnmgajipklnfmkjfcdmlbki" target="_blank" style="width:100%;text-decoration:none;justify-content:center;background:#0A7BC2;border-color:#0A7BC2;color:white">Get from Edge Add-ons</a>
+</div>
+
+<div class="install-card-pro">
+<div class="install-head"><div class="install-icon" style="background:rgba(66,133,244,.12);border-color:rgba(66,133,244,.22)">🌐</div><div><h4>Chrome</h4><div class="sub">Desktop only • manual zip update</div></div></div>
+<p>GitHub से rtps-pro.zip download → unzip → chrome://extensions → Developer mode → Load unpacked → folder चुनें। नया version: नया zip same तरीके से load करें (profiles safe रहते हैं)।</p>
+<a class="btn-hero btn-hero-secondary" href="https://github.com/PakkaScore/rtps-pro/releases/latest/download/rtps-pro.zip" style="width:100%;text-decoration:none;justify-content:center">📦 Download zip</a>
+</div>
+
+<div class="install-card-pro">
+<div class="install-head"><div class="install-icon" style="background:rgba(168,85,247,.12);border-color:rgba(168,85,247,.22)">📱</div><div><h4>Quetta / Kiwi</h4><div class="sub">Android • from zip • no auto-update</div></div></div>
+<p>Quetta (Play Store) या Kiwi (GitHub) → menu (⋮) → Extensions → Developer mode → + (from .zip) → zip चुनें। Official route Firefox/Edge easier है।</p>
+<div style="display:flex;gap:8px">
+<a class="btn-hero btn-hero-secondary" href="https://play.google.com/store/apps/details?id=net.quetta.browser" target="_blank" style="flex:1;text-decoration:none;justify-content:center;font-size:12px">Quetta</a>
+<a class="btn-hero btn-hero-secondary" href="https://github.com/kiwibrowser/src.next/releases" target="_blank" style="flex:1;text-decoration:none;justify-content:center;font-size:12px">Kiwi</a>
+</div>
+</div>
+</div>
+
+<div class="callout blue"><span class="callout-icon">📱</span><span>Android वाले Chrome में extensions नहीं चलते — फोन पर Firefox या Edge इस्तेमाल करें।</span></div>
+
+<h2 id="firefox"><span class="h2-icon">🦊</span> Firefox install — 30 sec</h2>
+<div class="steps-pro">
+<div class="step-pro"><div class="step-num-pro">1</div><div><h4>Firefox install करें</h4><p><a href="https://www.firefox.com/en-US/" target="_blank">Firefox</a> Play Store / desktop से। पहले से है तो ठीक।</p></div></div>
+<div class="step-pro"><div class="step-num-pro">2</div><div><h4>RTPS Pro खोलें</h4><p>Firefox में <a href="https://addons.mozilla.org/firefox/addon/rtps-pro/" target="_blank">RTPS Pro – Firefox Add-ons</a> खोलें।</p></div></div>
+<div class="step-pro"><div class="step-num-pro">3</div><div><h4>Add to Firefox</h4><p><b>Add to Firefox</b> → popup में <b>Add</b>। बस — install हो गया, updates अपने-आप। Menu (⋮) → Extensions → RTPS Pro।</p></div></div>
+</div>
+
+<h2 id="edge"><span class="h2-icon">🌊</span> Edge install</h2>
+<div class="steps-pro">
+<div class="step-pro"><div class="step-num-pro">1</div><div><h4>Edge install करें</h4><p><a href="https://www.microsoft.com/edge/download" target="_blank">Edge</a> latest version Play Store / desktop से।</p></div></div>
+<div class="step-pro"><div class="step-num-pro">2</div><div><h4>RTPS Pro Edge Add-ons खोलें</h4><p><a href="https://microsoftedge.microsoft.com/addons/detail/gdicmdfikcnmgajipklnfmkjfcdmlbki" target="_blank">RTPS Pro on Edge Add-ons</a> खोलें → <b>Get</b> → <b>Add extension</b>।</p></div></div>
+</div>
+
+<h2 id="chrome"><span class="h2-icon">🌐</span> Chrome install — zip</h2>
+<div class="steps-pro">
+<div class="step-pro"><div class="step-num-pro">1</div><div><h4>Zip download करें</h4><p><a href="https://github.com/PakkaScore/rtps-pro/releases/latest/download/rtps-pro.zip">rtps-pro.zip</a> download करें और unzip करें।</p></div></div>
+<div class="step-pro"><div class="step-num-pro">2</div><div><h4>Load unpacked</h4><p><code>chrome://extensions</code> → Developer mode on → <b>Load unpacked</b> → unzip किया folder चुनें।</p></div></div>
+<div class="step-pro"><div class="step-num-pro">3</div><div><h4>Update</h4><p>नया zip download → same तरीके से Load unpacked — profiles safe रहते हैं।</p></div></div>
+</div>
+
+<h2 id="compare"><span class="h2-icon">📊</span> Comparison — scrollable</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Browser</th><th>Where</th><th>How to install</th><th>Update</th><th>Best for</th></tr></thead>
+<tbody>
+<tr><td><b>🦊 Firefox</b></td><td>Android + desktop</td><td>AMO → Add</td><td>Auto</td><td>Recommended — stable, no cert error</td></tr>
+<tr><td><b>🌊 Edge</b></td><td>Android + desktop</td><td>Edge Add-ons → Get</td><td>Auto</td><td>Android + desktop official</td></tr>
+<tr><td><b>🌐 Chrome</b></td><td>Desktop only</td><td>zip → Load unpacked</td><td>Manual zip</td><td>Desktop users</td></tr>
+<tr><td><b>📱 Quetta/Kiwi</b></td><td>Android</td><td>Extensions → + from zip</td><td>Manual</td><td>Alternative Android</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2><span class="h2-icon">🔒</span> Privacy & FREE guarantee</h2>
+<p>100% on-device — कोई server नहीं, कोई account नहीं, कोई tracking नहीं। सिर्फ <code>serviceonline.bihar.gov.in</code> की permission। सारा data आपके browser storage में।</p>
+<div class="callout green"><span class="callout-icon">✅</span><span><b>Official:</b> हमेशा FREE, कभी पैसे नहीं मांगता। अगर कोई पैसे मांगे तो नकली कॉपी है — कृपया रिपोर्ट करें।</span></div>
+</div>
+
+<div class="side">
+<div class="side-card toc-desktop">
+<h4>On this page</h4>
+<ul class="toc-pro">
+<li><a href="#choose">Choose browser</a></li>
+<li><a href="#firefox">Firefox steps</a></li>
+<li><a href="#edge">Edge steps</a></li>
+<li><a href="#chrome">Chrome zip</a></li>
+<li><a href="#compare">Comparison</a></li>
+</ul>
+</div>
+<div class="side-card" style="background:linear-gradient(180deg, rgba(240,165,0,.10), rgba(255,255,255,.03));border-color:rgba(240,165,0,.24)">
+<h4>Quick install</h4>
+<a class="btn-hero btn-hero-primary" href="https://addons.mozilla.org/firefox/addon/rtps-pro/" target="_blank" style="width:100%;text-decoration:none;justify-content:center;margin-bottom:8px">🦊 Firefox — Add</a>
+<a class="btn-hero btn-hero-secondary" href="https://microsoftedge.microsoft.com/addons/detail/gdicmdfikcnmgajipklnfmkjfcdmlbki" target="_blank" style="width:100%;text-decoration:none;justify-content:center;margin-bottom:8px">🌊 Edge — Get</a>
+<a class="btn-hero btn-hero-secondary" href="https://github.com/PakkaScore/rtps-pro/releases/latest/download/rtps-pro.zip" style="width:100%;text-decoration:none;justify-content:center">📦 Chrome zip</a>
+</div>
+<div class="side-card">
+<h4>Details</h4>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;justify-content:space-between;font-size:12.5px"><span style="color:#64748B">Version</span><span style="color:#E2E8F0" class="version">v3.9.7</span></div>
+<div style="display:flex;justify-content:space-between;font-size:12.5px"><span style="color:#64748B">License</span><span style="color:#E2E8F0">MIT</span></div>
+<div style="display:flex;justify-content:space-between;font-size:12.5px"><span style="color:#64748B">Privacy</span><span style="color:#E2E8F0">100% local</span></div>
+<div style="display:flex;justify-content:space-between;font-size:12.5px"><span style="color:#64748B">Size</span><span style="color:#E2E8F0">~120KB</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="container">
+<div class="foot">
+<div class="foot-brand">
+<div style="display:flex;align-items:center;gap:8px">
+<svg viewBox="220 190 840 840" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;flex-shrink:0"><path fill="#F0A500" d="M244 214 H785 C927 214 1041 326 1041 467 C1041 612 932 732 784 732 V584 C846 584 894 535 894 472 C894 410 847 360 784 360 H388 V508 H317 C277 508 244 475 244 433 Z"/><path fill="#F0A500" d="M244 588 H317 C356 588 388 620 388 662 V795 C475 628 627 433 784 433 V584 C696 589 606 676 525 783 L425 949 C399 992 340 1019 294 994 C263 978 244 947 244 908 Z"/></svg>
+<span style="font-family:'Poppins',sans-serif;font-weight:800;letter-spacing:-.02em;color:#FFFFFF;font-size:15px">Pakka<span style="color:#F0A500">Score</span></span>
+</div>
+<div class="foot-built">Built with ❤️ for Bihar</div>
+<div class="foot-notaff">Not affiliated with Govt of Bihar, NIC, RTPS/ServicePlus.</div>
+</div>
+<div class="foot-links">
+<a href="https://github.com/PakkaScore/rtps-pro" target="_blank" rel="noopener">GitHub</a>
+<a href="guide-en.html">English</a>
+<a href="guide-hi.html">हिन्दी</a>
+<a href="download.html">Download</a>
+</div>
+<div class="foot-right">MIT License · © 2026 PakkaScore</div>
+</div>
+</div>
+</footer>
+
+<script>
+(function(){
+  const bar=document.getElementById('progress');
+  if(!bar) return;
+  function onScroll(){
+    const h=document.documentElement;
+    const scrolled=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+    bar.style.width=scrolled+'%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+})();
+(function(){
+  function updateVer(v){ if(!v) return; if(!v.startsWith('v')) v='v'+v; document.querySelectorAll('.version').forEach(el=>el.textContent=v); try{localStorage.setItem('rtps-pro-latest-version', JSON.stringify({ver:v,t:Date.now()}))}catch(e){} }
+  try{ const c=JSON.parse(localStorage.getItem('rtps-pro-latest-version')||'null'); if(c&&c.ver&&(Date.now()-c.t)<3600000) updateVer(c.ver); }catch(e){}
+  fetch('https://api.github.com/repos/PakkaScore/rtps-pro/releases/latest',{headers:{'Accept':'application/vnd.github.v3+json'}}).then(r=>r.ok?r.json():null).then(d=>{ if(d&&d.tag_name) updateVer(d.tag_name); }).catch(()=>{});
+})();
+</script>
+</body>
+</html>

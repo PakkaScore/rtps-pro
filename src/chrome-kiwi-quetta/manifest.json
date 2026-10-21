@@ -1,0 +1,80 @@
+{
+  "manifest_version": 3,
+  "name": "RTPS Pro by PakkaScore – Bihar RTPS AutoFill",
+  "short_name": "RTPS Pro",
+  "version": "3.9.7",
+  "description": "Auto-fill Bihar RTPS forms in one tap — जाति/आय/निवास/OBC-NCL/EWS. 100% on-device. Docs: pakkascore.github.io/rtps-pro",
+  "author": "PakkaScore",
+  "homepage_url": "https://pakkascore.github.io/rtps-pro/",
+  "minimum_chrome_version": "110",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://serviceonline.bihar.gov.in/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "RTPS Pro by PakkaScore",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://serviceonline.bihar.gov.in/*"
+      ],
+      "js": [
+        "i18n.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "commands": {
+    "fill-last-profile": {
+      "suggested_key": {
+        "default": "Alt+Shift+F"
+      },
+      "description": "Auto-fill with last used profile"
+    },
+    "save-current-form": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      },
+      "description": "Save current form into last used profile"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/*"
+      ],
+      "matches": [
+        "https://serviceonline.bihar.gov.in/*"
+      ]
+    }
+  ]
+}

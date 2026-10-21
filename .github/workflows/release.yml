@@ -1,0 +1,30 @@
+name: Release
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --if-present
+      - run: npm run zip
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            rtps-pro-*.zip
+            rtps-pro-*.xpi*
+            final-delivery-v396/3-github/github-social-preview-1280x640.png
+          generate_release_notes: true
+          body: |
+            RTPS Pro ${{ github.ref_name }} — Firefox • Edge • Chrome
+            Install: Firefox Add-ons, Edge Add-ons, or Chrome zip from assets.
+            Guides: https://pakkascore.blogspot.com/search/label/RTPS%20Pro

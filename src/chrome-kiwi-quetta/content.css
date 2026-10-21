@@ -1,0 +1,14 @@
+.rtps-pro-filled { outline: 2px solid #15803D !important; background-color: #ECFDF5 !important; transition: background-color .4s; }
+.rtps-pro-failed { outline: 2px solid #dc2626 !important; background-color: #fef2f2 !important; }
+
+#rtps-pro-toasts { position: fixed; right: 16px; top: 16px; z-index: 2147483647; display: flex; flex-direction: column; gap: 8px; font: 13px/1.4 Roboto, "Noto Sans", "Noto Sans Devanagari", "Segoe UI", Helvetica, Arial, sans-serif; }
+.rtps-pro-toast { display: flex; align-items: center; gap: 8px; background: #1B2A4A; color: #fff; padding: 10px 12px; border-radius: 10px; border-left: 4px solid #F0A500; box-shadow: 0 8px 24px rgba(0,0,0,.25); max-width: 360px; animation: rtpsIn .2s ease-out; }
+.rtps-pro-toast.ok { border-left-color: #22C55E; } .rtps-pro-toast.warn { border-left-color: #F0A500; } .rtps-pro-toast.info { border-left-color: #3D5A8A; }
+.rtps-pro-toast button { border: 0; border-radius: 6px; padding: 4px 8px; background: #F0A500; color: #1B2A4A; cursor: pointer; font-weight: 600; }
+.rtps-pro-toast button.x { background: transparent; opacity: .7; color: #fff; }
+@keyframes rtpsIn { from { transform: translateY(-8px); opacity: 0 } to { transform: none; opacity: 1 } }
+
+@media (max-width: 600px) {
+  #rtps-pro-toasts { right: 8px; left: 8px; top: 8px; }
+  .rtps-pro-toast { max-width: none; }
+}
