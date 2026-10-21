@@ -137,6 +137,5 @@ This repo's GitHub Pages site (`docs/` folder) is redesigned to match [open-auto
 - Guides: table-only forms (no duplicate boxes), local `assets/inline/` images, no chips, header single line `RTPS Pro`
 - Optimized: no `backdrop-filter` on cards, single grid 80px, 2 radial gradients, `content-visibility:auto`, `is-zooming` hides heavy layers
 
-See [GITHUB-REPO-PROFESSIONAL-GUIDE.md](./GITHUB-REPO-PROFESSIONAL-GUIDE.md) for how to upload and make everything work great.
 
 MIT License • © 2026 PakkaScore — Built with ❤️ for Bihar
