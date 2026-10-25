@@ -14,10 +14,9 @@
 </p>
 
 <p align="center">
-  <a href="https://pakkascore.github.io/rtps-pro/"><b>🌐 Website — pakkascore.github.io/rtps-pro</b></a> •
+  <a href="https://pakkascore.github.io/rtps-pro/"><b>pakkascore.github.io/rtps-pro</b></a> •
   <a href="https://pakkascore.github.io/rtps-pro/guide-hi.html">हिन्दी गाइड</a> •
-  <a href="https://pakkascore.github.io/rtps-pro/guide-en.html">English Guide</a> •
-  <a href="https://pakkascore.github.io/rtps-pro/download.html">Download</a>
+  <a href="https://pakkascore.github.io/rtps-pro/guide-en.html">English Guide</a>
 </p>
 
 ---
@@ -38,8 +37,6 @@ Bihar RTPS portal (serviceonline.bihar.gov.in) asks for the same 20-30 fields fo
 | OBC-NCL (Form-VI) | OBC-NCL केंद्र | Central govt jobs: UPSC, SSC, Railways |
 | NCL (Form-IX) | NCL बिहार | Bihar state jobs: BPSC |
 | EWS Certificate | EWS प्रमाण-पत्र | EWS quota |
-
-> BC/EBC typically need both OBC-NCL (Form-VI) for central exams and NCL (Form-IX) for Bihar exams — RTPS Pro handles both.
 
 ---
 
@@ -109,33 +106,10 @@ Full guides with 12 screens each: [Hindi Guide](https://pakkascore.github.io/rtp
 
 100% on-device. Profiles, drafts, settings in `chrome.storage.local` only. No server, no account, no analytics, no remote code, no network requests. Permissions: `storage`, `activeTab`, `scripting`, `contextMenus`, `tabs`; host `https://serviceonline.bihar.gov.in/*`. Uninstall removes everything.
 
-> **✅ Always FREE.** RTPS Pro never asks for money — not even on WhatsApp. Official only on Firefox Add-ons (by PakkaScore), Edge Add-ons, and this GitHub repo. If someone demands payment, it's fake — report it.
+> **✅ Always FREE.** RTPS Pro never asks for money. Official only on Firefox Add-ons (by PakkaScore), Edge Add-ons, and this GitHub repo. If someone demands payment, it's fake — report it.
 
 **Disclaimer:** Independent tool by PakkaScore. Not affiliated, endorsed, or sponsored by Govt of Bihar, NIC, RTPS/ServicePlus. Always verify form before Submit.
 
 ---
-
-## What's New in v3.9.7
-
-- Firefox • Edge • Chrome support, Firefox Recommended
-- Duplicate • Edit • Delete on profile card with armed double-tap safety
-- Identity guard with double-tap confirm to prevent wrong overwrite
-- Progress near Auto-fill action (not bottom)
-- Draft recovery + session timeout helper + JSON backup
-- Hindi matras fixed, 4 larger buttons, hierarchy clear
-- Dark minimal docs site with local images (no blogger), infinite mockup that pauses only on real zoom
-
----
-
-## Docs Site — Professional Redesign
-
-This repo's GitHub Pages site (`docs/` folder) is redesigned to match [open-autofill](https://harshilsureja.github.io/open-autofill/) style but with RTPS branding:
-
-- Dark minimal `#0E1428` + saffron `#F0A500`, Poppins headings, Geist body
-- Hero with infinite mockup (EN|HI paired rows, 28ms typing, IntersectionObserver, pause only on `visualViewport.scale!=1`)
-- Sections: What it does, Getting Started (3 steps saffron circles), Screenshots (landscape scrollable), Install, Guides (glow on click), FAQ accordion
-- Guides: table-only forms (no duplicate boxes), local `assets/inline/` images, no chips, header single line `RTPS Pro`
-- Optimized: no `backdrop-filter` on cards, single grid 80px, 2 radial gradients, `content-visibility:auto`, `is-zooming` hides heavy layers
-
 
 MIT License • © 2026 PakkaScore — Built with ❤️ for Bihar
