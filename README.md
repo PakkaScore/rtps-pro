@@ -112,4 +112,18 @@ Full guides with 12 screens each: [Hindi Guide](https://pakkascore.github.io/rtp
 
 ---
 
+## Support
+
+RTPS Pro is free and always will be — no feature is locked behind a payment.
+
+If it saved you a trip to the block office, you can buy me a coffee. ☕
+
+<p>
+  <a href="https://buymeacoffee.com/pakkascore" target="_blank" rel="noopener">
+    <img src="docs/assets/bmc-button.png" width="200" alt="Buy me a coffee">
+  </a>
+</p>
+
+---
+
 MIT License • © 2026 PakkaScore — Built with ❤️ for Bihar
